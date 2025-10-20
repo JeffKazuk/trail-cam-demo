@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://dxb7fn6wc2nwr"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_uc1xx"]
+top_radius = 0.1
+bottom_radius = 0.1
+
+[sub_resource type="BoxMesh" id="BoxMesh_uc1xx"]
+size = Vector3(0.2, 0.2, 0.26)
+
+[node name="tree" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mesh = SubResource("CylinderMesh_uc1xx")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -0.15)
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -0.13021553)
+mesh = SubResource("BoxMesh_uc1xx")
