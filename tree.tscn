@@ -5,7 +5,7 @@ top_radius = 0.1
 bottom_radius = 0.1
 
 [sub_resource type="BoxMesh" id="BoxMesh_uc1xx"]
-size = Vector3(0.2, 0.2, 0.26)
+size = Vector3(0.395, 0.2, 0.26)
 
 [node name="tree" type="Node3D"]
 
@@ -14,8 +14,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 mesh = SubResource("CylinderMesh_uc1xx")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -0.15)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.36192226, 1, 0)
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -0.13021553)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.12098339, 1, 0)
 mesh = SubResource("BoxMesh_uc1xx")
