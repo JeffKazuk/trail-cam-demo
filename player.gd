@@ -20,10 +20,5 @@ func _physics_process(_delta):
 	if Input.is_action_pressed("ui_up"):
 		direction.z -= speed
 
-	global_position += direction.rotated(Vector3(0,1,0),rotation.y)
+	global_position += direction.rotated(Vector3(0, 1, 0), rotation.y)
 
-func _process(_delta):
-	for treecam in Global.tree_loc:
-		var dir_vec = Vector2(position.x - treecam["p"].x,position.z - treecam["p"].y).normalized()
-		var dot = dir_vec.x * treecam["rv"].x + dir_vec.y * treecam["rv"].y
-		print(dot)

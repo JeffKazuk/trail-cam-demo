@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://vh11vfl1h5yy"]
+[gd_scene load_steps=7 format=3 uid="uid://vh11vfl1h5yy"]
 
 [ext_resource type="Script" uid="uid://cne0oro6upxnk" path="res://main.gd" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://c3dc8fp7lubal" path="res://player.tscn" id="2_0xm2m"]
@@ -12,6 +12,9 @@ sky_material = SubResource("ProceduralSkyMaterial_ig7tw")
 sky = SubResource("Sky_0xm2m")
 ambient_light_source = 3
 
+[sub_resource type="PlaneMesh" id="PlaneMesh_0xm2m"]
+size = Vector2(40, 40)
+
 [node name="main" type="Node3D"]
 script = ExtResource("1_ig7tw")
 
@@ -24,3 +27,6 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 1
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.9114679, 0.41137117, 0, -0.41137117, 0.9114679, -1.4170055, 7.762027, 22.340567)
 current = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_0xm2m")

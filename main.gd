@@ -5,7 +5,7 @@ var tree_scene = preload("res://tree.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	seed(1)
-	for _i in range(1):
+	for _i in range(15):
 		var loc = {}
 		loc["p"] = Vector2(randf_range(-20, 20), randf_range(-20, 20))
 		loc["r"] = randf_range(0, 2 * PI)
