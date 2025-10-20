@@ -6,14 +6,14 @@ var tree_scene = preload("res://tree.tscn")
 func _ready() -> void:
 	seed(42)
 	for _i in range(10):
-		var loc = []
-		loc.append(Vector2(randf_range(-20, 20), randf_range(-20, 20)))
-		loc.append(randf_range(0, 2 * PI))
+		var loc = {}
+		loc["p"] = (Vector2(randf_range(-20, 20), randf_range(-20, 20)))
+		loc["r"] = (randf_range(0, 2 * PI))
 		var t = tree_scene.instantiate()
 		add_child(t)
-		loc.append(t)
-		t.position.x = loc[0].x
-		t.position.z = loc[0].y
-		t.rotation.y = loc[1]
+		loc["node"] = (t)
+		t.position.x = loc["p"].x
+		t.position.z = loc["p"].y
+		t.rotation.y = loc["r"]
 		print(loc)
 		Global.tree_loc.append(loc)
